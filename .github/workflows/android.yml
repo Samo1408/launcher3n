@@ -41,20 +41,11 @@ jobs:
         
       - name: Show Dir/s in Source
         run: ls
-            $PWD
-            cd app
-            $PWD
+            mkdir 1
+            cd app/build
+            mkdir 2
             ls
-            $PWD
-            cd build
-            ls
-            $PWD
-            cd outputs
-            ls
-            $PWD
-            cd debug
-            ls
-            $PWD
+            
         
       - name: Upload APK
         uses: actions/upload-artifact@v5
