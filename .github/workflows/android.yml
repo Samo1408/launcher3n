@@ -48,5 +48,5 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: Modified-Debug-APK
-          path: app/build/outputs/../../*.apk
+          path: app/build/intermediates/javac/aospDebug/compileAospDebugJavaWithJavac/classes/*.apk
           retention-days: 30
