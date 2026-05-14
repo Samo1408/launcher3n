@@ -41,15 +41,12 @@ jobs:
         
       - name: Show Dir/s in Source
         run: ls
-            mkdir 1
-            cd app/build
-            mkdir 2
-            ls
+            
             
         
       - name: Upload APK
         uses: actions/upload-artifact@v5
         with:
-          name: KISS-Modified-Debug-APK
-          path: Launcher3n/app/build/outputs/apk/debug/*.apk
+          name: Modified-Debug-APK
+          path: app/build/outputs/../../*.apk
           retention-days: 30
