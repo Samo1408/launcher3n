@@ -41,6 +41,14 @@ jobs:
         
       - name: Show Dir/s in Source
         run: ls
+            cd app
+            ls
+            cd build
+            ls
+            cd outputs
+            ls
+            cd debug
+            ls
         
       - name: Upload APK
         uses: actions/upload-artifact@v5
