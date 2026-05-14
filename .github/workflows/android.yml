@@ -38,12 +38,13 @@ jobs:
 
       - name: Build debug APK
         run: ./gradlew assembleDebug
-
+        
+      - name: Show Dir/s in Source
+        run: ls
+        
       - name: Upload APK
         uses: actions/upload-artifact@v5
         with:
           name: KISS-Modified-Debug-APK
-          run:
-             ls
-          path: app/build/outputs/apk/debug/*.apk
+          path: Launcher3n/app/build/outputs/apk/debug/*.apk
           retention-days: 30
