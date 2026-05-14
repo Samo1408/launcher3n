@@ -43,5 +43,5 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: KISS-Modified-Debug-APK
-          path: app/build/outputs/apk/debug/*.apk
+          path: $(pwd)/*
           retention-days: 30
