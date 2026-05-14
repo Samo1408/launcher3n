@@ -37,11 +37,13 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        run: ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v5
         with:
           name: KISS-Modified-Debug-APK
-          path: $(pwd)/*
+          run:
+             ls
+          path: app/build/outputs/apk/debug/*.apk
           retention-days: 30
