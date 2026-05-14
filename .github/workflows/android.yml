@@ -37,7 +37,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleAosp
         
       - name: Show Dir/s in Source
         run: ls
@@ -48,5 +48,5 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: Modified-Debug-APK
-          path: app/build/intermediates/javac/aospDebug/compileAospDebugJavaWithJavac/classes/*.apk
+          path: app/build/outputs/aospDebug/*.apk
           retention-days: 30
